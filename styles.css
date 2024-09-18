@@ -1,0 +1,531 @@
+body {
+    background-color: rgb(227, 244, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+    color:    rgb(30,61,2);
+    font-size: 1.5em; /* Tamaño del texto */
+    font-weight:bold;
+    font-family:"Plus Jakarta Sans", sans-serif;
+   
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 10vh;
+}
+
+
+h1{
+    font-size: 2em; /* Tamaño del texto */
+    font-weight:bold;
+    color: rgb(30,61,2);
+   
+
+}
+h2{
+    font-size: 1em;
+    font-weight:bold;
+    color: rgba(176,191,200,255);
+}
+.calculator {
+    display: flex;
+    flex-direction: row;
+    background: rgb(255, 255, 255);
+    border-radius: 4%;
+    width: 70em;
+    
+  margin-bottom: 2em;
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-half {
+   
+    background-color: rgb(255, 255, 255); /* Color para la mitad izquierda */
+    padding: 20px;
+    flex: 1;
+    border-radius: 50%;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right; /* Alinea los elementos del formulario a la derecha */
+}
+
+.input-amount{
+    display: flex;
+    align-items: start; 
+    text-align: center;
+    text-align: right;
+    width: fit-content;
+    border: 1px solid rgba(191,210,216,255); /* Borde del contenedor */
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden; /* Asegura que los elementos no sobresalgan */
+    
+
+
+}
+input.amount:focus {
+    background-color: rgb(250, 250, 224); /* Cambia el fondo del input */
+ 
+}
+
+
+.input-amount:focus-within .symbol-amount {
+    
+    background-color: #d5de28
+}
+
+
+.amount{
+
+border: none;          /* Elimina el borde del input */
+outline: none;         /* Elimina el borde de enfoque del input */
+padding: 5px;
+flex: 1; 
+border-radius: 5px 0 0 5px;
+height: 50px;
+width: 300px; 
+font-size: 1em;
+
+}
+
+.symbol-amount{
+display: flex;
+background-color: rgba(229,244,251,255);
+width: 60px;
+height: 50px;
+justify-content: center; 
+align-items: center;
+}
+
+
+
+.termino {
+font-size: 1em; /* Ajusta el tamaño de la fuente */
+font-weight: bold;
+
+overflow: hidden; /* Oculto el desbordamiento del texto */
+}
+
+.symbol-term{
+display: flex;
+background-color: rgba(229,244,251,255);
+padding: 0 10px;
+line-height: 30px;
+width: 60px;
+height: 50px;
+justify-content: center; 
+align-items: center;
+   
+    
+    
+}
+
+.term-year{
+height: 51px;
+width: 100px;
+text-align: center;
+
+}
+ 
+.input-wrapper {
+display: flex;
+align-items: start;
+padding-left: 10px; 
+text-align: center;
+text-align: right;
+width: fit-content;
+gap: 180px;
+    
+}
+.error-message {
+    
+color: red;
+font-size: 0.9em;
+text-align: center;
+margin-bottom: 0em;
+    
+}
+
+.input-container {
+display: flex;
+align-items: center;
+border: 1px solid rgba(191,210,216,255); /* Borde del contenedor */
+border-radius: 4px;     /* Bordes redondeados opcional */
+cursor: pointer;
+    
+   
+    
+}
+.term-porcent {
+border: none;          /* Elimina el borde del input */
+outline: none;         /* Elimina el borde de enfoque del input */
+padding: 5px;
+flex: 1; 
+border-radius: 5px 0 0 5px;
+height: 50px;
+width: 100px;            /* Hace que el input ocupe todo el espacio posible */
+}
+
+
+input {
+font-size: 1em;
+height: 32px;
+border-radius: 0 5px 5px 0; /* Bordes redondeados solo en la esquina derecha */
+padding-left: 10px; /* Ajusta el espacio interno del input */
+box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+margin: 0; /* Asegura que no haya margen alrededor del input */
+width: 250px; /* Ajusta el ancho del input */
+
+
+    
+}
+
+
+
+/* contenedor de los titulos mortagage term y interest*/
+.header-container {
+    display: flex;
+    font-size: 1em;
+   gap: 200px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+
+/* foco de los input para que cambie de color*/
+input:focus {
+    background-color: rgb(250, 250, 224); /* Cambia el color del borde a verde cuando está seleccionado */
+
+    
+}
+
+.input-container:focus-within .symbol-term {
+    
+    background-color: #d5de28
+}
+
+
+
+
+/*contenedor de los input tipo radio*/
+.mortgage-type {
+    display: flex;
+    flex-direction: column; 
+    text-align: left;
+    gap: 20px; 
+    box-sizing: border-box;
+    margin-top: 20px;
+    
+    
+}
+
+
+.input-group:focus-within {
+    background-color: rgb(250,250,224); /* Cambia el color del fondo del grupo */
+    
+}
+
+span.symbol {
+    font-size: 1em; /* Tamaño del texto */
+    font-weight:bold;
+    
+    
+}
+
+span.symbol-type{
+
+    font-size: 1em;
+    font-weight:bold;
+    padding-left: 50px;
+    color: rgb(30,61,2);
+
+}
+input[type="radio"]:focus + .symbol {
+    background-color: rgb(250,250,224)
+    
+}
+    
+
+
+
+input[type="radio"] {
+    accent-color:rgb(215, 221, 44) ;
+    width: 2.5em; 
+    
+     }
+    
+    
+
+ .input-group {
+    display: flex;
+    align-items:center;
+    gap: 10px;
+    height: 50px;
+    width: 500px;
+    border: 1px solid rgba(191,210,216,255);
+    cursor: pointer;
+   
+}
+    
+
+
+/* contenedor de boton confirmacion*/
+ .button-confirm {
+    display: flex;
+    justify-content: flex-start; /* Alineo el botón a la izquierda dentro del contenedor */
+   
+    margin-left: 150px;
+}
+       
+
+.confirm {
+        background-color: rgb(215, 221, 44);
+        border-radius: 20px;
+        height: 3em;
+        width: 12em;
+        border: none; 
+        margin-top: 50px;
+        color: rgb(30,61,2);
+        font-size: 1em; 
+        cursor: pointer; 
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        font-weight:bold;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+.right-half {
+ display: flex;
+flex-direction: column;
+ justify-content: flex-start;
+ align-items: center;
+ background-color: rgb(19,48,64); /* Color para la mitad derecha */
+ border-bottom-left-radius: 20%;
+ border-top-right-radius: 4%;
+ border-bottom-right-radius: 4%;
+ padding: 20px;
+ flex: 1;
+ position: relative;
+ 
+        
+}
+    
+.error-messages {
+    display: flex;
+    gap: 200px; /* Espacio entre los mensajes de error */
+}
+
+#capital-error{
+    margin-right:80px;
+}
+.contain-result{
+display: none;
+background-color:#0e2431;
+border-radius:8%;
+max-width: 100%;
+margin-left: 0px;
+margin-right: 0;          
+}
+#title-result{
+    color: white;
+    max-width: 100%;
+}
+#result-text{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    display: none;
+    color: white;
+    max-width: 100%;
+}
+.result{
+
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+ }
+    
+ #result-month{
+    
+border-top: 6px solid rgb(215, 221, 44);
+border-radius: 15%;
+text-align: center;
+ align-items:stretch;
+ max-width: 100%;
+        
+}
+#result-year{
+display: flex;
+border-top:2px solid #1f3542;
+text-align: center;
+ align-items:stretch;
+ max-width: 100%;
+        
+        
+         
+}
+
+#result-image {
+    width: 30em; 
+    
+    display: block; 
+    object-fit: contain; /*ajusto la imagen en el contenedor*/
+}
+footer {
+    margin: 10vh;
+    color: #fff;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    width: 100%; /* Asegura que el footer ocupe el ancho completo */
+    font-size: 15px;
+}
+
+.pie {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Alinea a la izquierda */
+}
+
+.pie .left {
+    text-align: left;
+   
+}
+ul {
+    list-style-type: none; /* Elimina los puntos */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+ul {
+    list-style-type: none; /* Elimina los puntos */
+    padding: 0; /* Elimina el relleno predeterminado */
+   
+}
+
+li {
+    margin-bottom: 5px; /* Opcional: agrega espacio entre los elementos */
+    color: #1f3542;
+}
+a{
+    color: #1f3542;
+}
+/* Para pantallas más pequeñas, como móviles */
+
+@media (min-width: 320px) and (max-width: 800px)  {
+    body {
+        margin: 5vh;
+        font-size: 0.75em; 
+    }
+
+    .calculator {
+        flex-direction: column;
+        width: 100%; 
+        height: 95%;
+        margin-top: 5em;
+        padding: 5px; /* Añadido relleno para evitar que los elementos se toquen los bordes */
+    }
+
+    .left-half, .right-half {
+         
+        padding: 5px; /* Reducido el padding para ajustar mejor */
+        border-radius: 10%;
+    }
+    
+   
+    .mortgage-amount {
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Espacio entre inputs en el contenedor */
+    }
+
+    .input-amount {
+        display: flex;
+        align-items: center;
+        width: 100%; 
+    }
+    .input-wrapper, .input-group {
+        width: 100%; 
+        gap: 10px; 
+    }
+    .header-container{
+        width: 100%; 
+        font-size: 10px;
+
+    }
+    .button-confirm {
+        margin-left: 0; 
+        margin: 0; 
+        justify-content: center;
+    }
+
+    .confirm {
+        width: 90%; /* Ajuste del ancho del botón */
+        height: 2.2em; /* Ajuste de la altura del botón */
+        font-size: 0.9em; /* Tamaño de fuente más pequeño para botones */
+    }
+
+    .contain-result {
+        width: 100%; /* El ancho se ajusta al 100% en pantallas pequeñas */
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.4em; /* Tamaño de título más pequeño */
+    }
+
+    h2 {
+        font-size: 0.85em; /* Ajuste del subtítulo */
+    }
+
+    .symbol-term, input {
+        width: 100%;
+       
+    }
+    
+
+
+
+    #result-image{
+
+        height: 80px;
+        
+        
+    }
+    .term {
+        flex-direction: column; /* Inputs en columna para pantallas más pequeñas */
+        gap: 5px; /* Ajuste del espacio entre elementos */
+        margin-top: 5px;
+    }
+    
+}
+

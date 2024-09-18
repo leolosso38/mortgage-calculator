@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <title>Mortgage Calculator</title>
+    <link rel="icon" href="assets/images/favicon-32x32.png" type="image/x-icon" >
+</head>
+<body>
+    <div class="calculator">
+        
+        <section class="left-half">
+            <form>
+                <h1>Mortgage calculator</h1>
+                <h2>Mortgage Amount</h2>
+
+                <div class="mortgage-amount">
+                         <label for="capital" class="input-amount">
+                            <span class="symbol-amount">$</span>
+                            <input type="number" id="capital" class="amount"name="capital" required>
+                        </label>
+                   
+                    <span id="capital-error" class="error-message"></span>
+                </div>
+
+                <div class="header-container">
+                    <h2 class="termino">Mortgage Term</h2>
+                    <h2 class="termino">Interest Rate</h2>
+                </div>
+                
+                <div class="term">
+                    <div class="input-wrapper">
+                        <!-- Primer input con "Years" -->
+                        <label for="year" class="input-container">
+                            <input type="number" id="year" class="term-porcent" name="year" required>
+                            <span class="symbol-term">Years</span>
+                        </label>
+                
+
+                        <!-- Segundo input con "%" -->
+                        <label for="porcent" class="input-container">
+                            <input type="number" id="porcent" class="term-porcent" name="porcent" required>
+                            <span class="symbol-term">%</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="error-messages">
+                <span id="year-error" class="error-message"></span>
+                <span id="porcent-error" class="error-message"></span> 
+                </div>
+                
+
+
+
+
+                <div class="mortgage-type">
+                    <h2>Mortgage Type</h2>
+                    <label for="repayment" class="input-group">
+                        <input type="radio" id="repayment" name="mortgage-type" required>
+                        <span class="symbol-type">Repayment</span>
+                    </label>
+                    <div class="error-messages">
+                        <span id="repayment-error" class="error-message"></span>
+                    </div>
+                    <label for="interest-only" class="input-group">
+                        <input type="radio" id="interest-only" name="mortgage-type" required>
+                        <span class="symbol-type">Interest Only</span>
+                    </label>
+                    <div class="error-messages">
+                        <span id="Interest-error" class="error-message"></span>
+                    </div>
+                    <div class="button-confirm">
+                        <button class="confirm" type="button" id="confirm" name="confirm" ><img src="assets/images/icon-calculator.svg">Calculate Repayments</button>
+                        
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="right-half">
+            <div id="result-text">
+                <h1 id="title-result">Your results</h1>
+                <p>Your results are show below based on the information you provided.To adjust the results, edit the form and click "Calculate repayment"again</p>
+            </div>
+            <div id ="error-text">
+
+            </div>
+            <img id="result-image" src="assets/images/illustration-empty.svg">
+            <div id="container-result" class="contain-result">
+        
+                <div id="result-month" class="result"></div>
+                <div id="result-year" class="result"></div>
+             </div>
+        </section>
+        
+    </div>
+    
+</body>
+<footer> 
+    <div class="pie">
+        <ul>
+            <li class="left">&copy; Leonardo Losso. Todos los derechos reservados.</li>
+            <li><a href="mailto:leonardolosso26@hotmail.com">Correo: leonardolosso26@hotmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/leonardo-losso-94b29781/">LinkedIn</a> | <a href="https://github.com/leolosso38">GitHub</a></li>
+
+        </ul>
+    </div>
+    </footer>
+<script src="scripts.js"></script>
+</html>
