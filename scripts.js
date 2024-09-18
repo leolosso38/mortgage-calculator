@@ -73,7 +73,7 @@ capitalError.textContent = 'this field required';
 if (!isRepayment && !isInterestOnly) {
 interestError.textContent = 'this field required'
 repaymentError.textContent = 'this field required'
-errorText.textContent = 'Por favor, seleccione un tipo de hipoteca.';
+errorText.textContent = 'Please select a type of mortgage.';
 errorText.style.color = 'red';
 image.style.display = 'none';
 resultContainer.style.display = 'none';
