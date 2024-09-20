@@ -1,443 +1,367 @@
 body {
-    background-color: rgb(227, 244, 252);
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    
-    color:    rgb(30,61,2);
-    font-size: 1.5em; /* Tamaño del texto */
-    font-weight:bold;
-    font-family:"Plus Jakarta Sans", sans-serif;
-   
+    background-color: rgb(227, 244, 252); /* Yo configuro el color de fondo de la página a un azul claro */
+    display: flex; /* Utilizo Flexbox para organizar el contenido en la página */
+    justify-content: center; /* Alineo el contenido horizontalmente en el centro */
+    align-items: center; /* Alineo el contenido verticalmente en el centro */
+    color: rgb(30,61,2); /* Defino el color del texto */
+    font-size: 1.5em; /* Establezco un tamaño de texto grande */
+    font-weight: bold; /* Hago que el texto sea en negrita */
+    font-family: "Plus Jakarta Sans", sans-serif; /* Uso una fuente personalizada */
 }
+
 html, body {
-    height: 100%;
-    margin: 0;
+    height: 100%; /* Me aseguro de que la página y el body ocupen todo el alto de la pantalla */
+    margin: 0; /* Elimino cualquier margen predeterminado */
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 10vh;
+    display: flex; /* Uso Flexbox para organizar los elementos del body */
+    flex-direction: column; /* Organizo los elementos en una columna */
+    min-height: 100vh; /* Aseguro que el cuerpo ocupe al menos toda la altura de la pantalla */
+    margin: 10vh; /* Establezco un margen superior e inferior de 10vh */
 }
 
-
-h1{
-    font-size: 2em; /* Tamaño del texto */
-    font-weight:bold;
-    color: rgb(30,61,2);
-   
-
+h1 {
+    font-size: 2em; /* Defino el tamaño de la fuente del título */
+    font-weight: bold; /* Hago que el título sea en negrita */
+    color: rgb(30,61,2); /* Configuro el color del texto del título */
 }
-h2{
-    font-size: 1em;
-    font-weight:bold;
-    color: rgba(176,191,200,255);
+
+h2 {
+    font-size: 1em; /* Establezco un tamaño de fuente más pequeño para el subtítulo */
+    font-weight: bold; /* Hago el subtítulo en negrita */
+    color: rgba(176,191,200,255); /* Asigno un color gris claro al subtítulo */
 }
+
 .calculator {
-    display: flex;
-    flex-direction: row;
-    background: rgb(255, 255, 255);
-    border-radius: 4%;
-    width: 70em;
-    
-  margin-bottom: 2em;
-   
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Uso Flexbox para organizar los elementos dentro de la calculadora */
+    flex-direction: row; /* Coloco los elementos en fila */
+    background: rgb(255, 255, 255); /* Establezco un fondo blanco para la calculadora */
+    border-radius: 4%; /* Redondeo las esquinas de la calculadora */
+    width: 70em; /* Defino el ancho de la calculadora */
+    margin-bottom: 2em; /* Agrego un margen inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aplico una sombra para darle profundidad a la calculadora */
 }
 
 .left-half {
-   
-    background-color: rgb(255, 255, 255); /* Color para la mitad izquierda */
-    padding: 20px;
-    flex: 1;
-    border-radius: 50%;
+    background-color: rgb(255, 255, 255); /* Defino un fondo blanco para la mitad izquierda */
+    padding: 20px; /* Agrego relleno dentro de esta sección */
+    flex: 1; /* Hago que esta mitad ocupe todo el espacio disponible */
+    border-radius: 50%; /* Redondeo completamente los bordes */
 }
-
-
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: right; /* Alinea los elementos del formulario a la derecha */
+    display: flex; /* Uso Flexbox para organizar los elementos del formulario */
+    flex-direction: column; /* Organizo los elementos en columna */
+    align-items: flex-start; /* Alineo los elementos a la izquierda */
+    text-align: right; /* Alineo el texto a la derecha */
 }
 
-.input-amount{
-    display: flex;
-    align-items: start; 
-    text-align: center;
-    text-align: right;
-    width: fit-content;
-    border: 1px solid rgba(191,210,216,255); /* Borde del contenedor */
-    border-radius: 4px;
-    cursor: pointer;
-    overflow: hidden; /* Asegura que los elementos no sobresalgan */
-    
-
-
+.input-amount {
+    display: flex; /* Hago que el contenedor de entrada sea flexible */
+    align-items: start; /* Alineo los elementos al principio verticalmente */
+    text-align: right; /* Alineo el texto a la derecha */
+    width: fit-content; /* El ancho se ajusta al contenido */
+    border: 1px solid rgba(191,210,216,255); /* Establezco un borde alrededor del contenedor */
+    border-radius: 4px; /* Redondeo las esquinas */
+    cursor: pointer; /* Cambio el cursor a un puntero cuando el usuario pasa sobre el contenedor */
+    overflow: hidden; /* Me aseguro de que los elementos no sobresalgan del contenedor */
 }
+
 input.amount:focus {
-    background-color: rgb(250, 250, 224); /* Cambia el fondo del input */
- 
+    background-color: rgb(250, 250, 224); /* Cambio el fondo del input cuando está enfocado */
 }
-
 
 .input-amount:focus-within .symbol-amount {
-    
-    background-color: #d5de28
+    background-color: #d5de28; /* Cambio el color de fondo del símbolo si el input está enfocado */
 }
 
-
-.amount{
-
-border: none;          /* Elimina el borde del input */
-outline: none;         /* Elimina el borde de enfoque del input */
-padding: 5px;
-flex: 1; 
-border-radius: 5px 0 0 5px;
-height: 50px;
-width: 300px; 
-font-size: 1em;
-
+.amount {
+    border: none; /* Elimino el borde del input */
+    outline: none; /* Elimino el borde de enfoque del input */
+    padding: 5px; /* Agrego relleno dentro del input */
+    flex: 1; /* Hago que el input ocupe todo el espacio disponible */
+    border-radius: 5px 0 0 5px; /* Redondeo las esquinas izquierdas del input */
+    height: 50px; /* Defino la altura del input */
+    width: 300px; /* Defino el ancho del input */
+    font-size: 1em; /* Ajusto el tamaño de la fuente dentro del input */
 }
 
-.symbol-amount{
-display: flex;
-background-color: rgba(229,244,251,255);
-width: 60px;
-height: 50px;
-justify-content: center; 
-align-items: center;
+.symbol-amount {
+    display: flex; /* Uso Flexbox para organizar el símbolo */
+    background-color: rgba(229,244,251,255); /* Defino el color de fondo del símbolo */
+    width: 60px; /* Establezco el ancho del símbolo */
+    height: 50px; /* Establezco la altura del símbolo */
+    justify-content: center; /* Alineo el símbolo en el centro horizontalmente */
+    align-items: center; /* Alineo el símbolo en el centro verticalmente */
 }
-
-
 
 .termino {
-font-size: 1em; /* Ajusta el tamaño de la fuente */
-font-weight: bold;
-
-overflow: hidden; /* Oculto el desbordamiento del texto */
+    font-size: 1em; /* Establezco el tamaño de la fuente para este texto */
+    font-weight: bold; /* Hago que el texto sea en negrita */
+    overflow: hidden; /* Oculto el texto que desborda */
 }
 
-.symbol-term{
-display: flex;
-background-color: rgba(229,244,251,255);
-padding: 0 10px;
-line-height: 30px;
-width: 60px;
-height: 50px;
-justify-content: center; 
-align-items: center;
-   
-    
-    
+.symbol-term {
+    display: flex; /* Uso Flexbox para organizar el símbolo del término */
+    background-color: rgba(229,244,251,255); /* Defino el color de fondo del símbolo */
+    padding: 0 10px; /* Agrego relleno horizontal al símbolo */
+    line-height: 30px; /* Establezco la altura de línea para alinear verticalmente el texto */
+    width: 60px; /* Defino el ancho del símbolo */
+    height: 50px; /* Defino la altura del símbolo */
+    justify-content: center; /* Alineo el símbolo horizontalmente al centro */
+    align-items: center; /* Alineo el símbolo verticalmente al centro */
 }
 
-.term-year{
-height: 51px;
-width: 100px;
-text-align: center;
-
+.term-year {
+    height: 51px; /* Defino la altura del input */
+    width: 100px; /* Defino el ancho del input */
+    text-align: center; /* Centro el texto dentro del input */
 }
  
 .input-wrapper {
-display: flex;
-align-items: start;
-padding-left: 10px; 
-text-align: center;
-text-align: right;
-width: fit-content;
-gap: 180px;
-    
+    display: flex; /* Hago que el contenedor sea flexible */
+    align-items: start; /* Alineo los elementos al principio verticalmente */
+    padding-left: 10px; /* Agrego relleno izquierdo */
+    text-align: right; /* Alineo el texto a la derecha */
+    width: fit-content; /* El ancho se ajusta al contenido */
+    gap: 180px; /* Establezco un espacio entre los elementos */
 }
+
 .error-message {
-    
-color: red;
-font-size: 0.9em;
-text-align: center;
-margin-bottom: 0em;
-    
+    color: red;          /* Elegí el color rojo para que los mensajes de error sean fáciles de notar */
+    font-size: 0.9em;    /* Quise que el tamaño de la fuente sea pequeño para que el mensaje no distraiga demasiado */
+    text-align: center;  /* Decidí centrar el texto para que se vea más equilibrado */
+    margin-bottom: 0em;  /* Eliminé el margen inferior para ajustar el espaciado */
 }
 
 .input-container {
-display: flex;
-align-items: center;
-border: 1px solid rgba(191,210,216,255); /* Borde del contenedor */
-border-radius: 4px;     /* Bordes redondeados opcional */
-cursor: pointer;
-    
-   
-    
-}
-.term-porcent {
-border: none;          /* Elimina el borde del input */
-outline: none;         /* Elimina el borde de enfoque del input */
-padding: 5px;
-flex: 1; 
-border-radius: 5px 0 0 5px;
-height: 50px;
-width: 100px;            /* Hace que el input ocupe todo el espacio posible */
+    display: flex;       /* Usé Flexbox para que los elementos se alineen fácilmente */
+    align-items: center; /* Quise que los elementos dentro del contenedor se centren verticalmente */
+    border: 1px solid rgba(191,210,216,255); /* Le añadí un borde gris claro para darle un aspecto definido */
+    border-radius: 4px;  /* Redondeé las esquinas del contenedor para un diseño más suave */
+    cursor: pointer;     /* Cambié el cursor para que parezca interactivo */
 }
 
+.term-porcent {
+    border: none;        /* Eliminé el borde del input porque no quería que se vea un contorno adicional */
+    outline: none;       /* También eliminé el borde de enfoque para un diseño más limpio */
+    padding: 5px;        /* Añadí espacio interno para que el texto no esté pegado al borde */
+    flex: 1;             /* Hice que el input ocupe todo el espacio disponible */
+    border-radius: 5px 0 0 5px; /* Solo redondeé las esquinas izquierdas */
+    height: 50px;        /* Definí la altura del input para hacerlo consistente */
+    width: 100px;        /* Ajusté el ancho del input para que se vea proporcionado */
+}
 
 input {
-font-size: 1em;
-height: 32px;
-border-radius: 0 5px 5px 0; /* Bordes redondeados solo en la esquina derecha */
-padding-left: 10px; /* Ajusta el espacio interno del input */
-box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
-margin: 0; /* Asegura que no haya margen alrededor del input */
-width: 250px; /* Ajusta el ancho del input */
-
-
-    
+    font-size: 1em;      /* Mantengo el tamaño de la fuente lo suficientemente grande para facilitar la lectura */
+    height: 32px;        /* Establecí una altura estándar para el input */
+    border-radius: 0 5px 5px 0; /* Redondeé solo las esquinas derechas para complementar el contenedor */
+    padding-left: 10px;  /* Añadí un poco de espacio interno a la izquierda para que el texto no esté pegado */
+    box-sizing: border-box; /* Me aseguré de que el padding y el borde se incluyan en el ancho total */
+    margin: 0;           /* Eliminé cualquier margen para evitar desajustes */
+    width: 250px;        /* Definí el ancho del input para que se vea bien en el diseño */
 }
 
-
-
-/* contenedor de los titulos mortagage term y interest*/
+/* Contenedor de los títulos Mortgage Term y Interest */
 .header-container {
-    display: flex;
-    font-size: 1em;
-   gap: 200px;
-    width: 80%;
-    margin-top: 20px;
+    display: flex;          /* Usé Flexbox para alinear los títulos en una fila */
+    font-size: 1em;        /* Establecí un tamaño de fuente estándar para los títulos */
+    gap: 200px;            /* Añadí un espacio entre los títulos para que no se vean amontonados */
+    width: 80%;            /* Quise que el contenedor ocupe el 80% del ancho disponible */
+    margin-top: 20px;      /* Añadí un margen superior para separarlo de otros elementos */
 }
 
-
-/* foco de los input para que cambie de color*/
+/* Foco de los input para que cambie de color */
 input:focus {
-    background-color: rgb(250, 250, 224); /* Cambia el color del borde a verde cuando está seleccionado */
-
-    
+    background-color: rgb(250, 250, 224); /* Cambié el color de fondo al estar seleccionado para mejorar la visibilidad */
 }
 
 .input-container:focus-within .symbol-term {
-    
-    background-color: #d5de28
+    background-color: #d5de28; /* Cambié el fondo del símbolo cuando un input dentro del contenedor tiene el foco */
 }
 
-
-
-
-/*contenedor de los input tipo radio*/
+/* Contenedor de los inputs tipo radio */
 .mortgage-type {
-    display: flex;
-    flex-direction: column; 
-    text-align: left;
-    gap: 20px; 
-    box-sizing: border-box;
-    margin-top: 20px;
-    
-    
+    display: flex;             /* Utilicé Flexbox para alinear los inputs en una columna */
+    flex-direction: column;    /* Establecí que los elementos se coloquen verticalmente */
+    text-align: left;         /* Alineé el texto a la izquierda para una mejor legibilidad */
+    gap: 20px;                /* Añadí espacio entre los inputs para que no estén pegados */
+    box-sizing: border-box;   /* Aseguré que el padding y el borde se incluyan en el ancho total */
+    margin-top: 20px;         /* Añadí un margen superior para separarlo de otros elementos */
 }
-
 
 .input-group:focus-within {
-    background-color: rgb(250,250,224); /* Cambia el color del fondo del grupo */
-    
+    background-color: rgb(250,250,224); /* Cambié el color de fondo del grupo al tener el foco */
 }
 
 span.symbol {
-    font-size: 1em; /* Tamaño del texto */
-    font-weight:bold;
-    
-    
+    font-size: 1em;          /* Mantengo un tamaño de texto estándar para el símbolo */
+    font-weight: bold;       /* Hice que el texto del símbolo sea negrita para destacarlo */
 }
 
-span.symbol-type{
-
-    font-size: 1em;
-    font-weight:bold;
-    padding-left: 50px;
-    color: rgb(30,61,2);
-
+span.symbol-type {
+    font-size: 1em;          /* Establecí el tamaño de fuente para el tipo de símbolo */
+    font-weight: bold;       /* También lo hice negrita para mantener la consistencia */
+    padding-left: 50px;     /* Añadí espacio a la izquierda para separarlo del input */
+    color: rgb(30,61,2);     /* Elegí un color oscuro para el texto para que sea legible */
 }
+
 input[type="radio"]:focus + .symbol {
-    background-color: rgb(250,250,224)
-    
+    background-color: rgb(250,250,224); /* Cambié el color de fondo del símbolo cuando el input de tipo radio tiene el foco */
 }
-    
-
-
 
 input[type="radio"] {
-    accent-color:rgb(215, 221, 44) ;
-    width: 2.5em; 
-    
-     }
-    
-    
-
- .input-group {
-    display: flex;
-    align-items:center;
-    gap: 10px;
-    height: 50px;
-    width: 500px;
-    border: 1px solid rgba(191,210,216,255);
-    cursor: pointer;
-   
+    accent-color: rgb(215, 221, 44); /* Cambié el color de acento del input de tipo radio para que se vea más atractivo */
+    width: 2.5em;                 /* Ajusté el ancho del input de tipo radio para que sea visible y accesible */
 }
-    
 
-
-/* contenedor de boton confirmacion*/
- .button-confirm {
-    display: flex;
-    justify-content: flex-start; /* Alineo el botón a la izquierda dentro del contenedor */
-   
-    margin-left: 150px;
+.input-group {
+    display: flex;               /* Usé Flexbox para alinear los elementos dentro del grupo */
+    align-items: center;        /* Centré los elementos verticalmente dentro del grupo */
+    gap: 10px;                  /* Añadí espacio entre los elementos dentro del grupo */
+    height: 50px;               /* Establecí una altura estándar para el grupo */
+    width: 500px;               /* Definí el ancho del grupo para mantener la consistencia */
+    border: 1px solid rgba(191,210,216,255); /* Añadí un borde gris claro para definir el contorno del grupo */
+    cursor: pointer;            /* Cambié el cursor para que parezca interactivo */
 }
-       
+
+
+
+/* Contenedor de botón de confirmación */
+.button-confirm {
+    display: flex;                     /* Usé Flexbox para facilitar el alineado del botón */
+    justify-content: flex-start;       /* Alineo el botón a la izquierda dentro del contenedor */
+    margin-left: 150px;                /* Añadí un margen a la izquierda para separar el botón del borde */
+}
 
 .confirm {
-        background-color: rgb(215, 221, 44);
-        border-radius: 20px;
-        height: 3em;
-        width: 12em;
-        border: none; 
-        margin-top: 50px;
-        color: rgb(30,61,2);
-        font-size: 1em; 
-        cursor: pointer; 
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-        font-weight:bold;
-    }
-    
+    background-color: rgb(215, 221, 44); /* Elegí un color de fondo amarillo para que el botón destaque */
+    border-radius: 20px;               /* Redondeé las esquinas del botón para un diseño más amigable */
+    height: 3em;                       /* Establecí una altura estándar para el botón */
+    width: 12em;                       /* Definí un ancho específico para que el botón sea fácil de ver y hacer clic */
+    border: none;                      /* Eliminé el borde para un aspecto más limpio */
+    margin-top: 50px;                 /* Añadí un margen superior para separarlo de otros elementos */
+    color: rgb(30, 61, 2);             /* Elegí un color de texto oscuro para que sea legible sobre el fondo amarillo */
+    font-size: 1em;                   /* Mantuve un tamaño de fuente estándar para la legibilidad */
+    cursor: pointer;                   /* Cambié el cursor para indicar que el botón es interactivo */
+    display: flex;                     /* Usé Flexbox para centrar el contenido dentro del botón */
+    align-items: center;               /* Centré el contenido verticalmente dentro del botón */
+    justify-content: center;           /* Centré el contenido horizontalmente dentro del botón */
+    font-weight: bold;                 /* Hice el texto en negrita para darle más énfasis */
+}
 
-
-
-
-
-
-
-
-
-
-
-
+/* Estilo para la mitad derecha del contenedor */
 .right-half {
- display: flex;
-flex-direction: column;
- justify-content: flex-start;
- align-items: center;
- background-color: rgb(19,48,64); /* Color para la mitad derecha */
- border-bottom-left-radius: 20%;
- border-top-right-radius: 4%;
- border-bottom-right-radius: 4%;
- padding: 20px;
- flex: 1;
- position: relative;
- 
-        
+    display: flex;                      /* Utilicé Flexbox para organizar los elementos dentro de este contenedor */
+    flex-direction: column;             /* Establecí que los elementos se coloquen en una columna */
+    justify-content: flex-start;        /* Alineo los elementos hacia el principio del contenedor */
+    align-items: center;                /* Centré los elementos horizontalmente dentro del contenedor */
+    background-color: rgb(19, 48, 64);  /* Elegí un color oscuro para la mitad derecha para un contraste atractivo */
+    border-bottom-left-radius: 20%;    /* Redondeé la esquina inferior izquierda para suavizar el diseño */
+    border-top-right-radius: 4%;       /* Redondeé la esquina superior derecha para un toque estético */
+    border-bottom-right-radius: 4%;     /* Redondeé la esquina inferior derecha para mantener la consistencia */
+    padding: 20px;                     /* Añadí espacio interno para que el contenido no esté pegado a los bordes */
+    flex: 1;                            /* Permití que este contenedor ocupe el espacio disponible */
+    position: relative;                 /* Definí la posición relativa para facilitar la colocación de elementos hijos */
 }
-    
+
 .error-messages {
-    display: flex;
-    gap: 200px; /* Espacio entre los mensajes de error */
+    display: flex;                /* Usé Flexbox para alinear los mensajes de error en una fila */
+    gap: 200px;                  /* Establecí un espacio entre los mensajes de error para que no se vean amontonados */
 }
 
-#capital-error{
-    margin-right:80px;
+#capital-error {
+    margin-right: 80px;          /* Añadí un margen a la derecha para separar este mensaje de otros elementos */
 }
-.contain-result{
-display: none;
-background-color:#0e2431;
-border-radius:8%;
-max-width: 100%;
-margin-left: 0px;
-margin-right: 0;          
-}
-#title-result{
-    color: white;
-    max-width: 100%;
-}
-#result-text{
-    display: flex;
-    margin: 0;
-    padding: 0;
-    display: none;
-    color: white;
-    max-width: 100%;
-}
-.result{
 
-    color: white;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 100%;
- }
-    
- #result-month{
-    
-border-top: 6px solid rgb(215, 221, 44);
-border-radius: 15%;
-text-align: center;
- align-items:stretch;
- max-width: 100%;
-        
+.contain-result {
+    display: none;                /* Inicialmente oculto este contenedor de resultados */
+    background-color: #0e2431;   /* Elegí un color de fondo oscuro para el contenedor de resultados */
+    border-radius: 8%;           /* Redondeé las esquinas del contenedor para un diseño más suave */
+    max-width: 100%;             /* Quise que el contenedor ocupe el ancho máximo disponible */
+    margin-left: 0px;            /* No añadí margen a la izquierda para un ajuste preciso */
+    margin-right: 0;             /* No añadí margen a la derecha para mantener el contenedor alineado */
 }
-#result-year{
-display: flex;
-border-top:2px solid #1f3542;
-text-align: center;
- align-items:stretch;
- max-width: 100%;
-        
-        
-         
+
+#title-result {
+    color: white;                /* Utilicé blanco para el texto del título para que destaque sobre el fondo oscuro */
+    max-width: 100%;             /* Aseguré que el título ocupe el ancho máximo disponible */
+}
+
+#result-text {
+    display: flex;               /* Usé Flexbox para organizar el texto del resultado */
+    margin: 0;                   /* Eliminé el margen para evitar desajustes */
+    padding: 0;                  /* Eliminé el padding para un ajuste preciso */
+    display: none;                /* Inicialmente oculto este texto del resultado */
+    color: white;                /* Usé blanco para el texto para que sea legible sobre el fondo oscuro */
+    max-width: 100%;             /* Aseguré que el texto ocupe el ancho máximo disponible */
+}
+
+.result {
+    color: white;                /* Usé blanco para el texto de los resultados para mejorar la legibilidad */
+    margin: 0;                   /* Eliminé el margen para mantener el contenido alineado */
+    padding: 0;                  /* Eliminé el padding para un ajuste más preciso */
+    display: flex;               /* Usé Flexbox para organizar los elementos de resultado en una columna */
+    flex-direction: column;      /* Establecí que los elementos se coloquen en una columna */
+    align-items: flex-start;     /* Alineé los elementos a la izquierda para una presentación ordenada */
+    max-width: 100%;             /* Aseguré que el contenedor de resultados ocupe el ancho máximo disponible */
+}
+
+#result-month {
+    border-top: 6px solid rgb(215, 221, 44); /* Añadí un borde superior amarillo para destacar esta sección */
+    border-radius: 15%;          /* Redondeé las esquinas para suavizar el diseño */
+    text-align: center;          /* Centré el texto en esta sección para una mejor presentación */
+    align-items: stretch;        /* Alineé los elementos para que ocupen el espacio disponible */
+    max-width: 100%;             /* Quise que esta sección ocupe el ancho máximo disponible */
+}
+
+#result-year {
+    display: flex;               /* Usé Flexbox para organizar los elementos en una fila */
+    border-top: 2px solid #1f3542; /* Añadí un borde superior oscuro para definir esta sección */
+    text-align: center;          /* Centré el texto para mejorar la presentación */
+    align-items: stretch;        /* Hice que los elementos estiren para ocupar el espacio disponible */
+    max-width: 100%;             /* Aseguré que esta sección ocupe el ancho máximo disponible */
 }
 
 #result-image {
-    width: 30em; 
-    
-    display: block; 
-    object-fit: contain; /*ajusto la imagen en el contenedor*/
+    width: 30em;                 /* Establecí un ancho específico para la imagen para que sea visible */
+    display: block;              /* Aseguré que la imagen se comporte como un bloque */
+    object-fit: contain;         /* Ajusté la imagen para que se mantenga dentro del contenedor sin distorsionarse */
 }
+
 footer {
-    margin: 10vh;
-    color: #fff;
-    margin-top: auto; /* Empuja el footer hacia abajo */
-    width: 100%; /* Asegura que el footer ocupe el ancho completo */
-    font-size: 15px;
+    margin: 10vh;                /* Añadí un margen para separar el footer del resto del contenido */
+    color: #fff;                 /* Establecí el color del texto en blanco para mayor contraste */
+    margin-top: auto;            /* Empujo el footer hacia abajo, ocupando el espacio restante */
+    width: 100%;                 /* Aseguro que el footer ocupe el ancho completo de la página */
+    font-size: 15px;             /* Definí un tamaño de fuente estándar para el texto del footer */
 }
 
 .pie {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start; /* Alinea a la izquierda */
+    width: 100%;                 /* Quise que el contenedor de pie ocupe el ancho completo */
+    display: flex;               /* Utilicé Flexbox para organizar los elementos en una fila */
+    justify-content: flex-start; /* Alineo los elementos hacia la izquierda */
 }
 
 .pie .left {
-    text-align: left;
-   
-}
-ul {
-    list-style-type: none; /* Elimina los puntos */
-    padding: 0; /* Elimina el relleno predeterminado */
+    text-align: left;            /* Alineo el texto a la izquierda dentro de esta sección */
 }
 
 ul {
-    list-style-type: none; /* Elimina los puntos */
-    padding: 0; /* Elimina el relleno predeterminado */
-   
+    list-style-type: none;       /* Eliminé los puntos de la lista para un aspecto más limpio */
+    padding: 0;                  /* Eliminé el relleno predeterminado de la lista */
 }
 
 li {
-    margin-bottom: 5px; /* Opcional: agrega espacio entre los elementos */
-    color: #1f3542;
+    margin-bottom: 5px;          /* Opcional: agregué espacio entre los elementos de la lista para mejor legibilidad */
+    color: #1f3542;              /* Establecí un color oscuro para los elementos de la lista para un contraste adecuado */
 }
-a{
-    color: #1f3542;
+
+a {
+    color: #1f3542;              /* Usé el mismo color oscuro para los enlaces, manteniendo la coherencia visual */
 }
+
 /* Para pantallas más pequeñas, como móviles */
 
 @media (min-width: 320px) and (max-width: 800px)  {
